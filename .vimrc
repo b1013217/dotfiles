@@ -59,6 +59,8 @@ hi CursorLineNr ctermbg=4 ctermfg=0
 set cursorline
 hi clear CursorLine
 
+" 次の行に移動するやつ
+set whichwrap=h,l
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
 set list listchars=tab:\▸\-
