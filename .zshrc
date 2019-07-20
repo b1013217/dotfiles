@@ -5,9 +5,11 @@
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
-export JAVA_HOME=`/usr/libexec/java_home -v 9`
-export PATH=/usr/local/bin:$PATH
-
+#export JAVA_HOME=`/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java_home -v "10"`
+#PATH=${JAVA_HOME}/bin:${PATH}
+export JAVA_HOME=$(/usr/libexec/java_home -v 10)
+CLASSPATH=.:~/Documents/java_classpath/mysql-connector-java-8.0.11.jar; export CLASSPATH 
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # 日本語を表示可能にする
 setopt print_eight_bit
@@ -129,8 +131,9 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias cdd='cd ~/Documents'
-
 alias mkdir='mkdir -p'
+
+alias python='python3'
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
